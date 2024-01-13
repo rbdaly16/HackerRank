@@ -19,7 +19,7 @@ class Strategy(object):
 
     def __startlow__(self):
         j = 0
-        knock_down = False
+
         for low_tile in self.tiles:
             j += 1
             for tile in self.tiles[j:]:
@@ -27,7 +27,6 @@ class Strategy(object):
                     self.tiles.remove(low_tile)
                     self.tiles.remove(tile)
                     print(f"You rolled a {self.roll_sum} so I knocked down {low_tile} and {tile} using startlow strategy.")
-                    knock_down = True
                     return self.tiles
 
 
